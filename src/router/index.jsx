@@ -1,4 +1,4 @@
-import RouterWaiter from "./RouterWaiter";
+import RouterWaiter from "./RouterWaiter/index";
 import routeBefore from './routeBefore'
 import routes from './routes'
 function RouterConfig() {

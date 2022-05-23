@@ -1,15 +1,15 @@
 import React, { FC } from 'react'
+import {useNavigate,useLocation } from 'react-router-dom'
 import { TabBar } from 'antd-mobile'
-import {Route, HashRouter as Router,} from 'react-router-dom'
 import {AppOutline, MessageOutline, UnorderedListOutline, UserOutline,} from 'antd-mobile-icons'
-import styles from './index.css'
-const Bottom = () => {
-    const history = useHistory()
-    const location = useLocation()
-    const { pathname } = location
+
+function footerBar() {
+    // const useNavigate = useNavigate()
+    // const location = useLocation()
+    const { pathname } = {pathname:'/'}
 
     const setRouteActive = (value) => {
-        history.push(value)
+        // useNavigate.push(value)
     }
 
     const tabs = [
@@ -41,34 +41,6 @@ const Bottom = () => {
                 <TabBar.Item key={item.key} icon={item.icon} title={item.title} />
             ))}
         </TabBar>
-    )
-}
-
-function footerBar() {
-    return (
-        <Router initialEntries={['/home']}>
-            <div className={styles.app}>
-                <div className={styles.body}>
-                    <Switch>
-                        <Route exact path='/home'>
-                            <Home />
-                        </Route>
-                        <Route exact path='/todo'>
-                            <Todo />
-                        </Route>
-                        <Route exact path='/message'>
-                            <Message />
-                        </Route>
-                        <Route exact path='/me'>
-                            <PersonalCenter />
-                        </Route>
-                    </Switch>
-                </div>
-                <div className={styles.bottom}>
-                    <Bottom />
-                </div>
-            </div>
-        </Router>
     )
 }
 export default footerBar()

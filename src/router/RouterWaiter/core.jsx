@@ -6,9 +6,8 @@
  * @LastEditors: Neo
  */
 import React from 'react'
-import { Navigate, RouteObject } from 'react-router-dom'
+import { Navigate, } from 'react-router-dom'
 import Guard from './guard'
-import { RouterWaiterPropsType, MetaType, FunctionalImportType } from '@/types'
 
 export default class Fn {
     routes
@@ -34,7 +33,7 @@ export default class Fn {
             if (obj.path === undefined) {
                 return
             }
-            if (obj.redirect) {
+            if (obj.redirect) {//hwx:Navigate等价于以前版本中的Redirect组件
                 obj.element = <Navigate to={obj.redirect} replace={true}/>
             } else if (obj.component) {
                 obj.element = this.lazyLoad(obj.component, obj.meta || {})

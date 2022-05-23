@@ -1,4 +1,4 @@
-import styles from "./index.css";
+import styles from "./index.module.css";
 import {NavBar} from "antd-mobile";
 import React from "react";
 

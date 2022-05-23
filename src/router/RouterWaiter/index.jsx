@@ -13,7 +13,6 @@ meta，[Object] 自定义的数据
  */
 import { useRoutes } from 'react-router-dom'
 import Fn from './core'
-import { RouterWaiterPropsType } from '@/types'
 
 function RouterWaiter ({routes, onRouteBefore, loading,}) {
     const fn = new Fn({

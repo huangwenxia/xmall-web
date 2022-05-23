@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
 const path = require('path');
-
 import react from '@vitejs/plugin-react'
 import vitePluginImport from 'vite-plugin-babel-import'
 
@@ -13,7 +12,7 @@ export default defineConfig({
         //         libraryName: 'antd-mobile',
         //         libraryDirectory: 'es',
         //         style(name) {
-        //             return `antd-mobile/lib/${name}/style/index.css`
+        //             return `antd-mobile/lib/${name}/style/index.module.css`
         //         },
         //     },
         // ]),
@@ -21,7 +20,7 @@ export default defineConfig({
     resolve: {
         // 配置路径别名
         alias: {
-            '@': path.resolve(__dirname, './src'),
+            '@': path.resolve(__dirname, './src/'),
         },
     },
     css:{
@@ -30,7 +29,7 @@ export default defineConfig({
             hashPrefix: 'prefix',
         },
         preprocessorOptions: {
-            less: {
+            sass: {
                 // 支持内联 JavaScript
                 javascriptEnabled: true,
             },
@@ -38,5 +37,6 @@ export default defineConfig({
     },
     server:{
         open:true,
+        hmr:true,
     },
 })

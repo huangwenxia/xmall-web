@@ -1,4 +1,4 @@
-import PageLayout from '@/components/Layout/index'
+import PageLayout from '../components/Layout/index'
 
 const routes = [
     {

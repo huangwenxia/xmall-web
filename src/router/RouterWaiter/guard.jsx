@@ -7,7 +7,6 @@
  */
 import React from 'react'
 import { Navigate, useLocation, useNavigate } from 'react-router-dom'
-import { ReactElementType, MetaType, OnRouteBeforeType, OnRouteBeforeResType } from '@/types'
 import utils from '@/utils'
 
 let temp = null
