@@ -9,4 +9,4 @@ function headerBar() {
         </div>
     )
 }
-export default headerBar()
+export default headerBar

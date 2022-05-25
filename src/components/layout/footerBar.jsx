@@ -6,7 +6,7 @@ import {AppOutline, MessageOutline, UnorderedListOutline, UserOutline,} from 'an
 function footerBar() {
     // const useNavigate = useNavigate()
     // const location = useLocation()
-    const { pathname } = {pathname:'/'}
+    // const { pathname } = location
 
     const setRouteActive = (value) => {
         // useNavigate.push(value)
@@ -36,11 +36,11 @@ function footerBar() {
     ]
 
     return (
-        <TabBar activeKey={pathname} onChange={value => setRouteActive(value)}>
+        <TabBar activeKey={'home'} onChange={value => setRouteActive(value)}>
             {tabs.map(item => (
                 <TabBar.Item key={item.key} icon={item.icon} title={item.title} />
             ))}
         </TabBar>
     )
 }
-export default footerBar()
+export default footerBar

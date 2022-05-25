@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom'
 import React from "react"; // 子路由出口，类似vue的router-view
 import styles from './index.module.css'
 
-function Index () {
+function PageLayout () {
     return (
         <div className="container">
             <div className={styles.app}>
@@ -22,4 +22,4 @@ function Index () {
     )
 }
 
-export default Index
+export default PageLayout

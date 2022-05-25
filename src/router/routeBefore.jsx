@@ -4,6 +4,7 @@
  * @return {string} 需要跳转到其他页时，就返回一个该页的path路径，或返回resolve该路径的promise对象
  */
 const onRouteBefore = ({ pathname, meta }) => {
+    console.log(111)
     // 示例：动态修改页面title
     if (meta.title !== undefined) {
         document.title = meta.title

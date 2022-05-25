@@ -1,4 +1,5 @@
-import PageLayout from '../components/Layout/index'
+import PageLayout from '@/components/layout/index'
+import React from "react";
 
 const routes = [
     {
@@ -15,7 +16,31 @@ const routes = [
                     needLogin: true,
                     roleId: 10000,
                 },
-                component: () => import(/* webpackChunkName: "index" */ '@/views/home/index'),
+                component: () => import('@/pages/home'),
+            },
+            {
+                meta: {
+                    title: '我的消息',
+                    needLogin: true,
+                    roleId: 10000,
+                },
+                component: () => import('@/pages/message'),
+            },
+            {
+                meta: {
+                    title: '个人中心',
+                    needLogin: true,
+                    roleId: 10000,
+                },
+                component: () => import('@/pages/personalCenter'),
+            },
+            {
+                meta: {
+                    title: '待办',
+                    needLogin: true,
+                    roleId: 10000,
+                },
+                component: () => import('@/pages/todo'),
             },
         ]
     },
