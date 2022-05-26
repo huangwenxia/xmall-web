@@ -4,12 +4,12 @@ import { TabBar } from 'antd-mobile'
 import {AppOutline, MessageOutline, UnorderedListOutline, UserOutline,} from 'antd-mobile-icons'
 
 function footerBar() {
-    // const useNavigate = useNavigate()
-    // const location = useLocation()
-    // const { pathname } = location
+    const navigate = useNavigate()
+    const location = useLocation()
+    const { pathname } = location
 
     const setRouteActive = (value) => {
-        // useNavigate.push(value)
+        navigate(value)
     }
 
     const tabs = [
@@ -36,7 +36,7 @@ function footerBar() {
     ]
 
     return (
-        <TabBar activeKey={'home'} onChange={value => setRouteActive(value)}>
+        <TabBar activeKey={pathname} onChange={value => setRouteActive(value)}>
             {tabs.map(item => (
                 <TabBar.Item key={item.key} icon={item.icon} title={item.title} />
             ))}

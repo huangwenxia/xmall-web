@@ -12,7 +12,7 @@ export default defineConfig({
         //         libraryName: 'antd-mobile',
         //         libraryDirectory: 'es',
         //         style(name) {
-        //             return `antd-mobile/lib/${name}/style/index.module.css`
+        //             return `antd-mobile/lib/${name}/style/index.module.scss`
         //         },
         //     },
         // ]),
@@ -32,11 +32,12 @@ export default defineConfig({
             sass: {
                 // 支持内联 JavaScript
                 javascriptEnabled: true,
+                additionalData: '@import "@/assets/scss/variables.scss";'
             },
         },
     },
     server:{
         open:true,
-        hmr:true,
+        // hmr:true,
     },
 })

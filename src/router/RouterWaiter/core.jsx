@@ -9,7 +9,7 @@ import React from 'react'
 import { Navigate, } from 'react-router-dom'
 import Guard from './guard'
 
-export default class Fn {
+export default class Core {
     routes
     onRouteBefore
     loading

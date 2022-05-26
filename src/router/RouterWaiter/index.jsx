@@ -12,15 +12,15 @@ meta，[Object] 自定义的数据
 （优先级：redirect > component > element）
  */
 import { useRoutes } from 'react-router-dom'
-import Fn from './core'
+import Core from './core'
 
 function RouterWaiter ({routes, onRouteBefore, loading,}) {
-    const fn = new Fn({
+    const core = new Core({
         routes,
         onRouteBefore,
         loading,
     })
-    const reactRoutes = fn.transformRoutes()
+    const reactRoutes = core.transformRoutes()
     const elements = useRoutes(reactRoutes)
 
     return elements
