@@ -1,0 +1,49 @@
+[class*="footer-bar"] {
+  width: 1em;
+  height: 1em;
+  font-size: 20px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.footer-bar-home {
+  background-image: url(../images/footerbar/icon_tab_main.png);
+}
+
+.footer-bar-home-selected {
+  background-image: url(../images/footerbar/icon_tab_main_sel.png);
+}
+
+.footer-bar-cart {
+  background-image: url(../images/footerbar/icon_tab_cart.png);
+}
+
+.footer-bar-cart-selected {
+  background-image: url(../images/footerbar/icon_tab_cart_sel.png);
+}
+
+.footer-bar-category {
+  background-image: url(../images/footerbar/icon_tab_classify.png);
+}
+
+.footer-bar-category-selected {
+  background-image: url(../images/footerbar/icon_tab_classify_sel.png);
+}
+
+.footer-bar-user {
+  background-image: url(../images/footerbar/icon_tab_profile.png);
+}
+
+.footer-bar-user-selected {
+  background-image: url(../images/footerbar/icon_tab_profile_sel.png);
+}
+
+.footer-bar-life {
+  background-image: url(../images/footerbar/icon_tab_pinwei.png);
+}
+
+.footer-bar-life-selected {
+  background-image: url(../images/footerbar/icon_tab_pinwei_sel.png);
+}

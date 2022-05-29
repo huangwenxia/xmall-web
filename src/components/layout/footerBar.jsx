@@ -1,8 +1,20 @@
 import React, { FC } from 'react'
 import {useNavigate,useLocation } from 'react-router-dom'
 import { TabBar } from 'antd-mobile'
-import {AppOutline, MessageOutline, UnorderedListOutline, UserOutline,} from 'antd-mobile-icons'
-
+import "./footerBar.scss"
+// import {AppOutline, MessageOutline, UnorderedListOutline, UserOutline,} from 'antd-mobile-icons'
+import {
+    IconHome,
+    IconHomeSelected,
+    IconCart,
+    IconCartSelected,
+    IconCategory,
+    IconCategorySelected,
+    IconUser,
+    IconUserSelected,
+    IconLife,
+    IconLifeSelected,
+} from '@/assets/css/icons'
 function footerBar() {
     const navigate = useNavigate()
     const location = useLocation()
@@ -16,29 +28,46 @@ function footerBar() {
         {
             key: '/home',
             title: '首页',
-            icon: <AppOutline />,
+            icon: <IconHome/>,
+            iconSelected: <IconHomeSelected/>,
+            // icon: <AppOutline />,
         },
         {
-            key: '/todo',
-            title: '我的待办',
-            icon: <UnorderedListOutline />,
+            key: '/category',
+            title: '分类',
+            icon: <IconCategory />,
+            iconSelected: <IconCategorySelected/>,
+            // icon: <UnorderedListOutline />,
         },
         {
-            key: '/message',
-            title: '我的消息',
-            icon: <MessageOutline />,
+            key: '/life',
+            title: '生活',
+            icon: <IconLife />,
+            iconSelected: <IconLifeSelected/>,
+            // icon: <MessageOutline />,
         },
         {
-            key: '/me',
-            title: '个人中心',
-            icon: <UserOutline />,
+            key: '/cart',
+            title: '购物车',
+            icon: <IconCart />,
+            iconSelected: <IconCartSelected/>,
+            // icon: <UserOutline />,
+        },
+        {
+            key: '/user',
+            title: '我的',
+            icon: <IconUser />,
+            iconSelected: <IconUserSelected/>,
+            // icon: <UserOutline />,
         },
     ]
 
     return (
         <TabBar activeKey={pathname} onChange={value => setRouteActive(value)}>
             {tabs.map(item => (
-                <TabBar.Item key={item.key} icon={item.icon} title={item.title} />
+                <TabBar.Item key={item.key}
+                             icon={item.key==pathname?item.iconSelected:item.icon}
+                             title={item.title} />
             ))}
         </TabBar>
     )

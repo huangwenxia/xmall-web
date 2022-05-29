@@ -26,31 +26,40 @@ const routes = [
                 component: () => import('@/pages/home'),
             },
             {
-                path: '/message',
+                path: '/category',
                 meta: {
-                    title: '我的消息',
+                    title: '分类',
                     needLogin: true,
                     roleId: 10000,
                 },
-                component: () => import('@/pages/message'),
+                component: () => import('@/pages/category'),
             },
             {
-                path: '/personalCenter',
+                path: '/life',
                 meta: {
-                    title: '个人中心',
+                    title: '生活',
                     needLogin: true,
                     roleId: 10000,
                 },
-                component: () => import('@/pages/personalCenter'),
+                component: () => import('@/pages/life'),
             },
             {
-                path: '/todo',
+                path: '/cart',
                 meta: {
-                    title: '待办',
+                    title: '购物车',
                     needLogin: true,
                     roleId: 10000,
                 },
-                component: () => import('@/pages/todo'),
+                component: () => import('@/pages/cart'),
+            },
+            {
+                path: '/user',
+                meta: {
+                    title: '我的',
+                    needLogin: true,
+                    roleId: 10000,
+                },
+                component: () => import('@/pages/user'),
             },
         ]
     },
