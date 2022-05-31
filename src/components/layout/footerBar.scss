@@ -1,5 +1,14 @@
+.adm-tab-bar-item {
+  height: 90px;
+  padding-top: 10px;
+  justify-content: start;
+}
 .adm-tab-bar-item-title{
-  color:#7a7e83
+  color:#7a7e83;
+  margin-top: 16px;
+}
+.adm-tab-bar-item-icon{
+  height: auto;
 }
 .adm-tab-bar-item.adm-tab-bar-item-active {
   .adm-tab-bar-item-title {

@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 const path = require('path');
+import postCssPxToRem from "postcss-pxtorem"
 import react from '@vitejs/plugin-react'
 import vitePluginImport from 'vite-plugin-babel-import'
 
@@ -35,9 +36,27 @@ export default defineConfig({
                 additionalData: '@import "@/assets/scss/variables.scss";'
             },
         },
+        postcss:{
+            plugins:[
+                require('autoprefixer')({
+                    overrideBrowserslist: [
+                        'Android 4.1',
+                        'iOS 7.1',
+                        'Chrome > 31',
+                        'ff > 31',
+                        'ie >= 8',
+                        '> 1%',
+                    ],
+                }),
+                postCssPxToRem({
+                    rootValue: 75,//(设计稿/10)1rem的大小
+                    propList:['*'],//需要转换的属性，这里选择全部都进行转换
+                }),
+                require('postcss-flexbugs-fixes')
+            ]
+        }
     },
     server:{
         open:true,
-        // hmr:true,
     },
 })
