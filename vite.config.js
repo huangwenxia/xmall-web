@@ -1,11 +1,11 @@
-import { defineConfig } from 'vite'
+import { defineConfig,loadEnv } from 'vite'
 const path = require('path');
 import postCssPxToRem from "postcss-pxtorem"
 import react from '@vitejs/plugin-react'
 import vitePluginImport from 'vite-plugin-babel-import'
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({mode})=>({
     plugins: [
         react(),
         // vitePluginImport([
@@ -58,5 +58,13 @@ export default defineConfig({
     },
     server:{
         open:true,
+        cors: true, // 跨域
+        proxy: {
+            "/api": {
+                target: loadEnv(mode, process.cwd()).VITE_SERVER_URL, // "http://newbill-web.k8s:8080", // 目标地址
+                changeOrigin: true, // 修改源
+                secure: false, // ssl
+            },
+        },
     },
-})
+}))
