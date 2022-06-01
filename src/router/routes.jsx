@@ -34,15 +34,15 @@ const routes = [
                 },
                 component: () => import('@/pages/category'),
             },
-            {
-                path: '/life',
-                meta: {
-                    title: '生活',
-                    needLogin: true,
-                    roleId: 10000,
-                },
-                component: () => import('@/pages/life'),
-            },
+            // {
+            //     path: '/life',
+            //     meta: {
+            //         title: '生活',
+            //         needLogin: true,
+            //         roleId: 10000,
+            //     },
+            //     component: () => import('@/pages/life'),
+            // },
             {
                 path: '/cart',
                 meta: {

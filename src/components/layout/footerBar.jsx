@@ -12,8 +12,6 @@ import {
     IconCategorySelected,
     IconUser,
     IconUserSelected,
-    IconLife,
-    IconLifeSelected,
 } from '@/assets/css/icons'
 function footerBar() {
     const navigate = useNavigate()
@@ -38,13 +36,6 @@ function footerBar() {
             icon: <IconCategory />,
             iconSelected: <IconCategorySelected/>,
             // icon: <UnorderedListOutline />,
-        },
-        {
-            key: '/life',
-            title: '生活',
-            icon: <IconLife />,
-            iconSelected: <IconLifeSelected/>,
-            // icon: <MessageOutline />,
         },
         {
             key: '/cart',

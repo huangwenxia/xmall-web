@@ -1,0 +1,23 @@
+.header-bar-wrapper{
+  background-color: transparent;
+  .adm-nav-bar{
+    height: 88px;
+    .header-bar-title{
+      font-weight: 700;
+      font-size: 32px;
+    }
+    .adm-nav-bar-left{
+      width: 64px;
+      margin-right: 10px;
+      flex-grow: 0;
+      .icon-erweima {
+        font-size: 52px;
+      }
+    }
+    .adm-nav-bar-right{
+      flex-grow: 0;
+    }
+  }
+}
+
+
