@@ -2,7 +2,6 @@ import {SafeArea,Swiper,Toast,Image} from "antd-mobile"
 import './index.scss'
 import {useState} from "react";
 
-
 function Home() {
     const  [ carouselList, setCarouselList] = useState(
         [{

@@ -1,7 +1,8 @@
 import { useNavigate, useLocation } from "react-router-dom"
-import axios, { AxiosRequestConfig } from "axios"
+import axios from "axios"
 import { Storage } from "@/utils/Storage"
-
+import {createBrowserHistory} from "history";
+import {history} from '@/router'
 // 取消重复请求
 const pending = []
 const CancelToken = axios.CancelToken
@@ -64,9 +65,9 @@ instance.interceptors.response.use(
     // const location = useLocation()
     const errorCode = response?.data?.status
     if (errorCode !== 200) {
-      // if (errorCode === 401 && location.pathname != "/login") {
-      //   navigate("/login")
-      // }
+      if (errorCode === 401 && history.location.pathname != "/login") {
+          history.push("/login")
+      }
       return Promise.reject({ ...response.data })
     }
 
