@@ -5,15 +5,15 @@ import {useState} from "react";
 function Home() {
     const  [ carouselList, setCarouselList] = useState(
         [{
-                src: "@/public/temp/banner3.jpg",
+                src: "/temp/banner3.jpg",
                 background: "rgb(203, 87, 60)",
             },
             {
-                src: "@/public/temp/banner2.jpg",
+                src: "/temp/banner2.jpg",
                 background: "rgb(205, 215, 218)",
             },
             {
-                src: "@/public/temp/banner4.jpg",
+                src: "/temp/banner4.jpg",
                 background: "rgb(183, 73, 69)",
             }
         ]

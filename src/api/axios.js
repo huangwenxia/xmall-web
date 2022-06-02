@@ -1,8 +1,6 @@
-import { useNavigate, useLocation } from "react-router-dom"
 import axios from "axios"
 import { Storage } from "@/utils/Storage"
-import {createBrowserHistory} from "history";
-import {history} from '@/router'
+import history from '@/router/history'
 // 取消重复请求
 const pending = []
 const CancelToken = axios.CancelToken

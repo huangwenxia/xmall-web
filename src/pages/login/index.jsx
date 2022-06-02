@@ -1,6 +1,8 @@
-import './index.scss'
+import history from '@/router/history'
 import { Form,Input,Button,Toast ,NavBar} from 'antd-mobile'
 import {useState} from "react";
+import './index.scss'
+
 import Api from "@/api"
 import { useNavigate } from "react-router-dom"
 function Login() {
@@ -33,13 +35,9 @@ function Login() {
             })
         })
     }
-    const back = () =>
-        Toast.show({
-            content: '点击了返回区域',
-            duration: 1000,
-        })
+
     return (<div className="login-wrapper">
-        <NavBar onBack={back}>登录</NavBar>
+        <NavBar onBack={()=>history.back()}>登录</NavBar>
         <div className="login-main">
             <h2>欢迎回来！</h2>
             <Form onFinish={onFinish}
