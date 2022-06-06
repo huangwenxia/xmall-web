@@ -30,10 +30,10 @@ export default defineConfig(({mode})=>({
             hashPrefix: 'prefix',
         },
         preprocessorOptions: {
-            sass: {
+            scss: {
                 // 支持内联 JavaScript
                 javascriptEnabled: true,
-                additionalData: '@import "@/assets/scss/variables.scss";'
+                additionalData: '@import "@/assets/css/variables.scss";'
             },
         },
         postcss:{

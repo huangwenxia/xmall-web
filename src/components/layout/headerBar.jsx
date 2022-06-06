@@ -1,7 +1,7 @@
 import styles from "./index.module.scss";
 import "./headerBar.scss"
-import {NavBar, SearchBar,Button} from "antd-mobile";
-import React from "react";
+import {NavBar, SearchBar,Button,Badge} from "antd-mobile";
+import React, {useEffect, useState} from "react";
 import {useLocation } from 'react-router-dom'
 
 function HomeTitle(){
@@ -30,24 +30,27 @@ function headerBar() {
         },
         {
             key: '/category',
-            title: ()=>(<div className="header-bar-title">分类</div>),
+            title: ()=>(<div className="header-bar-title category">分类</div>),
         },
         {
             key: '/cart',
             left:'',
-            title:()=>(<div className="header-bar-title">购物车</div>),
+            title:()=>(<div className="header-bar-title cart">购物车</div>),
             right:'',
         },
         {
             key: '/user',
-            title: ()=>(<div className="header-bar-title">我的</div>),
+            title: ()=>(<div className="header-bar-title user">我的</div>),
             left:'',
             right:()=>(<div>
                 <Button color='primary' fill='none'
                         style={{
                             '--text-color':'#000000',
                         }}>
-                    <i className="iconfont icon-xiaoxi"></i>
+                    <Badge content='99+' />
+                    <Badge content={Badge.dot}>
+                        <i className="iconfont icon-xiaoxi"></i>
+                    </Badge>
                 </Button>
                 <Button color='primary' fill='none'
                         style={{
@@ -58,11 +61,26 @@ function headerBar() {
             </div>),
         },
     ]
+    const [NBOpacity,setNBOpacity] = useState(0)
+
+    const handleScroll = (e)=>{
+        let scrollTop = document.documentElement.scrollTop
+        let opacity = scrollTop/44>=44?1:parseFloat(scrollTop/44)
+        setNBOpacity(()=>opacity)
+    }
+
+    useEffect(()=>{
+        window.addEventListener('scroll',handleScroll);
+        return ()=>window.removeEventListener('scroll',handleScroll)
+    })
     return (
         <div className={styles.top}>
            <div className="header-bar-wrapper">
                { navBars.filter(item=>pathname==item.key).map(item => (
                    <NavBar backArrow={false}
+                           style={{
+                               backgroundColor:`rgba(255, 255, 255, ${NBOpacity})`
+                           }}
                            left={typeof item.left=='function'?item?.left():item.left}
                            right={typeof item.right=='function'?item?.right():item.right}>
                        {typeof item.title=='function'?item?.title():item.title}

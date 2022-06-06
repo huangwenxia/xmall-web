@@ -1,41 +1,28 @@
-// base color
-//:root {
-//  --adm-color-primary: #1677ff;
-//  --adm-color-success: #00b578;
-//  --adm-color-warning: #ff8f1f;
-//  --adm-color-danger: #ff3141;
-//  --adm-color-white: #ffffff;
-//  --adm-color-weak: #999999;
-//  --adm-color-light: #cccccc;
-//  --adm-border-color: #eeeeee;
-//  --adm-font-size-main: 26px;
-//  --adm-color-text: #333333;
-//  --adm-hd: 2;
-//  --adm-font-family: -apple-system, blinkmacsystemfont, 'Helvetica Neue',
-//  helvetica, segoe ui, arial, roboto, 'PingFang SC', 'miui',
-//  'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
-//}
 
-$base-color: #d55e9a;     //基础粉色
-$blue-auto:#5fbbfc;            //基础蓝色
-$blue-dark:#256ba9;            //基础蓝色
-$theme-bg: rgba(67,67,67,1); //头部与左侧黑色
-$light-blue: #3A71A8;              //蓝色
-$red-auto: #ff0000;                //红色
-$green-auto: #39c700;              //绿色
-$orange-auto: #ff9600;             //橙色
-$orange-light: #faf2ed;
+/* 页面左右间距 */
+$page-row-spacing: 30upx;
+$page-color-base: #f8f8f8;
+$page-color-light: #f8f6fc;
+$base-color: #fa436a;
 
-$black-dark: #323232;  //菜单选中背景色
-$black-light: #434343;  //菜单背景色
-$black-pale: #666666;
-$black-half: #aaa;
-$gray-1: #808080;      //文字颜色
-$gray-2: #cccccc;      //文字
-$gray-3: #e7e7e7;      //描边
-$gray-4: #f2f2f2;      //表头
-$gray-5: #fafafa;      //隔行换色
-
-$red-select: #d55e9a;
-
-$boxShadow: rgba(0,0,0,.05);
+/* 文字尺寸 */
+$font-sm: 24px;
+$font-base: 28px;
+$font-lg: 32px;
+/*文字颜色*/
+$font-color-dark: #303133;
+$font-color-base: #606266;
+$font-color-light: #909399;
+$font-color-disabled: #C0C4CC;
+$font-color-spec: #4399fc;
+/* 边框颜色 */
+$border-color-dark: #DCDFE6;
+$border-color-base: #E4E7ED;
+$border-color-light: #EBEEF5;
+/* 图片加载中颜色 */
+$image-bg-color: #eee;
+/* 行为相关颜色 */
+$uni-color-primary:#fa436a;
+$uni-color-success: #4cd964;
+$uni-color-warning: #f0ad4e;
+$uni-color-error: #dd524d;
