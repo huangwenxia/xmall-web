@@ -1,8 +1,9 @@
 .hm-wrapper{
-  height: 2000px;
   background: #f5f5f5;
-
+  width: 100%;
   .hm-container{
+    position: relative;
+    overflow: hidden;
     /* 头部 轮播图 */
     .carousel-section{
       position: relative;

@@ -158,7 +158,7 @@ function Home() {
         <div style={{ background: '#ace0ff' }}>
             <SafeArea position='top' />
         </div>
-        <div className="hm-container" >
+        <div className="hm-container has-footer" >
             <div className="carousel-section">
                         <div className='titleNview-placing'></div>
                         <div className='titleNview-background' style={{backgroundColor:titleNViewBackground}}></div>

@@ -6,7 +6,7 @@ import styles from './index.module.scss'
 
 function PageLayout () {
     return (
-        <div className="container">
+        <div className="container has-footer">
             <div className={styles.app}>
                 <div className={styles.top}>
                     <HeaderBar />
