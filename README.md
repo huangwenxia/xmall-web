@@ -4,7 +4,7 @@
 ![](https://img.shields.io/github/package-json/dependency-version/huangwenxia/xmall-web/react-router-dom)
 ![](https://img.shields.io/github/package-json/dependency-version/huangwenxia/xmall-web/resso)
 
-基于React 实现的移动端商城(react+resso+axios)
+基于React18 实现的移动端商城(vite+react+react-router-dom(v6)+resso (状态管理)+antdmobile+axiso)
 ## 简介
 本项目是基于React实现的h5移动商城，包括商品列表、加入购物车、下单等商城基本功能。本项目包含服务端，后台管理、移动商城，开发文档、流程完整详尽，非常适合作为个人练手项目。
 
